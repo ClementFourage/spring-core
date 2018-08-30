@@ -1,37 +1,26 @@
 package com.formation.user;
 
-import com.formation.service.FeedbackFactory;
+import com.formation.service.IFeedback;
+
 import java.text.MessageFormat;
 
-/**
- * Class to make interactions with the user
- */
 public class UserInteraction {
-	private FeedbackFactory factory;
+	private IFeedback feedback;
 
-	public UserInteraction() {
-		// feedback = factory.getFeedback();
-	}
+//	public UserInteraction() {
+//		feedback = factory.getFeedback();
+//	}
 
-	/**
-	 * To say hello to the user named <code>name</code>
-	 *
-	 * @param name
-	 */
 	public void sayHello(String name) {
-		factory.getFeedback().say(MessageFormat.format("Hello {0} !", name));
+		feedback.say(MessageFormat.format("Hello {0} !", name));
 	}
 
-	/**
-	 * To say goodbye to the user named <code>name</code>
-	 *
-	 * @param name
-	 */
 	public void sayGoodBye(String name) {
-		factory.getFeedback().say(MessageFormat.format("Goodbye {0} !", name));
+		feedback.say(MessageFormat.format("Goodbye {0} !", name));
 	}
 
-	public void setFactory(FeedbackFactory factory) {
-		this.factory = factory;
+	public void setFeedback(IFeedback feedback) {
+		this.feedback = feedback;
 	}
+
 }
