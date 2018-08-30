@@ -5,10 +5,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.formation.user.UserInteraction;
 
-/**
- * Hello world!
- *
- */
 public class App {
 	
     public static void main( String[] args ) {
@@ -16,10 +12,6 @@ public class App {
     	
     	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
     	UserInteraction interaction = applicationContext.getBean(UserInteraction.class);
-    	
-//    	UserInteraction interaction = new UserInteraction();
-//    	FeedbackFactory factory = new FeedbackFactory();
-//    	interaction.setFactory(factory);
     	
     	interaction.sayHello(name);
     	interaction.sayGoodBye(name);

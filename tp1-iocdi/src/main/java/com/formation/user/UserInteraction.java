@@ -1,15 +1,15 @@
 package com.formation.user;
 
-import com.formation.service.IFeedback;
-
 import java.text.MessageFormat;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.formation.service.IFeedback;
+
+@Component
 public class UserInteraction {
 	private IFeedback feedback;
-
-//	public UserInteraction() {
-//		feedback = factory.getFeedback();
-//	}
 
 	public void sayHello(String name) {
 		feedback.say(MessageFormat.format("Hello {0} !", name));
@@ -19,6 +19,7 @@ public class UserInteraction {
 		feedback.say(MessageFormat.format("Goodbye {0} !", name));
 	}
 
+	@Autowired
 	public void setFeedback(IFeedback feedback) {
 		this.feedback = feedback;
 	}
