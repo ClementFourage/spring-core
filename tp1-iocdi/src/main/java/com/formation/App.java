@@ -9,6 +9,7 @@ import com.formation.user.UserInteraction;
 public class App {
 	
     public static void main( String[] args ) {
+    	
     	String name = "Bender";
     	
     	ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
@@ -16,8 +17,6 @@ public class App {
     	
     	interaction.sayHello(name);
     	interaction.sayGoodBye(name);
-    	
-    	
     
     }
 }

@@ -4,7 +4,6 @@ import java.text.MessageFormat;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import com.formation.service.IFeedback;
 
 @Component
@@ -17,6 +16,10 @@ public class UserInteraction {
 
 	public void sayGoodBye(String name) {
 		feedback.say(MessageFormat.format("Goodbye {0} !", name));
+	}
+	
+	public int sayTheCaptainAgeForAFamousThreeMast() {
+		return feedback.giveMeTheCaptainAge(10, 3);
 	}
 
 	@Autowired
