@@ -23,7 +23,7 @@ public class UserInteractionTest {
 	private UserInteraction interaction;
 
 	@Test
-	public void theCaptainAge() {
+	public void showCaptainAge() {
 		assertEquals(58, interaction.sayTheCaptainAgeForAFamousThreeMast());
 		System.out.println(interaction.sayTheCaptainAgeForAFamousThreeMast());
 	}
